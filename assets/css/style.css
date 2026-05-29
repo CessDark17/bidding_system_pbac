@@ -1,0 +1,149 @@
+/* ======================================================
+   DROPDOWN MENU STYLING
+   ====================================================== */
+
+.dropdown-menu {
+    min-width: 220px;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-lg);
+    padding: 0.5rem 0;
+    animation: dropdownFade 0.2s ease;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item i {
+    width: 20px;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(13, 110, 253, 0.08);
+    padding-left: 1.2rem;
+}
+
+.dropdown-divider {
+    margin: 0.3rem 0;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================================================
+   USER DROPDOWN BUTTON
+   ====================================================== */
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+}
+
+/* ======================================================
+   RESPONSIVE NAVBAR & DROPDOWN
+   ====================================================== */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .ms-lg-3 {
+        margin-top: 1rem !important;
+        width: 100%;
+    }
+
+    .btn-electric,
+    .btn-outline-light {
+        width: 100%;
+    }
+}
+
+/* ======================================================
+   ELECTRIC BUTTON EFFECT
+   ====================================================== */
+
+.btn-electric {
+    background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-electric:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 202, 240, 0.4);
+    color: white;
+}
+
+/* ======================================================
+   ELECTRIC LOGO
+   ====================================================== */
+
+.electric-logo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.electric-logo i {
+    color: #212529;
+    font-size: 18px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}

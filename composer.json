@@ -1,0 +1,11 @@
+{
+    "name": "acer/bidding_system",
+    "autoload": {
+        "psr-4": {
+            "Acer\\BiddingSystem\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^5.7"
+    }
+}

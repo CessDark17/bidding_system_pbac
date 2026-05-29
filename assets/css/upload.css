@@ -1,0 +1,376 @@
+/**
+ * Upload Interface Styles
+ * FIBECO Bidding System
+ * File: upload.css
+ * 
+ * Styles for file upload, drag-drop zones, and extraction review
+ */
+
+/* ======================================================
+   UPLOAD ZONE
+   ====================================================== */
+.upload-zone {
+    border: 2px dashed #dee2e6;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.upload-zone:hover {
+    border-color: #0d6efd;
+    background-color: #f0f7ff;
+}
+
+.upload-zone.drag-over {
+    border-color: #0d6efd;
+    background-color: #e7f1ff;
+    transform: scale(1.02);
+}
+
+.upload-zone i {
+    font-size: 3rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.upload-zone h5 {
+    margin-bottom: 0.5rem;
+}
+
+.upload-zone p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* File List */
+.file-list-container {
+    margin-top: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.file-list-header {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.file-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+.file-item:hover {
+    background-color: #f8f9fa;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.file-name i {
+    font-size: 1.25rem;
+}
+
+.file-name .file-ext-pdf { color: #dc3545; }
+.file-name .file-ext-excel { color: #198754; }
+.file-name .file-ext-word { color: #0d6efd; }
+.file-name .file-ext-image { color: #fd7e14; }
+
+.file-size {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-left: 1rem;
+}
+
+.file-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.file-status .badge {
+    font-size: 0.7rem;
+}
+
+.file-progress {
+    width: 100px;
+    margin: 0 0.5rem;
+}
+
+.remove-file {
+    color: #dc3545;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.remove-file:hover {
+    background-color: rgba(220,53,69,0.1);
+    transform: scale(1.1);
+}
+
+/* Upload Queue */
+.upload-queue {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.queue-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.queue-item:last-child {
+    margin-bottom: 0;
+}
+
+.queue-item .file-name {
+    flex: 1;
+}
+
+.queue-item .file-status {
+    margin-left: 1rem;
+}
+
+/* ======================================================
+   EXTRACTION REVIEW
+   ====================================================== */
+.review-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.review-preview {
+    flex: 1;
+    min-width: 300px;
+}
+
+.review-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.document-preview {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    height: 400px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.document-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.document-preview embed,
+.document-preview iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+
+.extraction-confidence {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.confidence-high {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.confidence-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.confidence-low {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* Field Mapping */
+.field-mapping-group {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.field-mapping-group h6 {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.field-mapping-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.field-mapping-row label {
+    width: 150px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.field-mapping-row .db-field {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+.field-mapping-row input {
+    flex: 1;
+}
+
+/* ======================================================
+   BATCH IMPORT
+   ====================================================== */
+.batch-summary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.batch-summary .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.import-log {
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 0.75rem;
+    background-color: #1a1e2b;
+    color: #00ff00;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.import-log-entry {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.import-log-entry.success { color: #00ff00; }
+.import-log-entry.error { color: #ff4444; }
+.import-log-entry.warning { color: #ffaa00; }
+
+/* ======================================================
+   SPINNERS & LOADING
+   ====================================================== */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.btn-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ======================================================
+   RESPONSIVE UPLOAD
+   ====================================================== */
+@media (max-width: 768px) {
+    .upload-zone {
+        padding: 2rem 1rem;
+    }
+    
+    .upload-zone i {
+        font-size: 2rem;
+    }
+    
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .file-status {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .review-container {
+        flex-direction: column;
+    }
+    
+    .field-mapping-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .field-mapping-row label {
+        width: auto;
+    }
+}
